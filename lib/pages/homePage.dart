@@ -15,6 +15,10 @@ class _HomePageState extends State<HomePage> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
+        Image.asset(
+          'images/1.png',
+          height: 80.0,
+        ),
         Text('Cursos ',
             textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.displayMedium
