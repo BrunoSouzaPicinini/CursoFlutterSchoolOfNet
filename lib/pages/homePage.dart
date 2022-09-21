@@ -8,24 +8,31 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  int _cursos = 0;
+
   @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        Text(
-          'Hello World, Flutter!',
-          textAlign: TextAlign.center,
-          style: TextStyle(
-              color: Colors.blueAccent, decoration: TextDecoration.none),
-        ),
-        Text(
-          'animado com esse cara',
-          textAlign: TextAlign.center,
-          style: TextStyle(
-              color: Colors.green,
-              fontSize: 30,
-              decoration: TextDecoration.none),
+        Text('Cursos ',
+            textAlign: TextAlign.center,
+            style: Theme.of(context).textTheme.displayMedium
+            // style: TextStyle(
+            // color: Colors.blueAccent, decoration: TextDecoration.none),
+            ),
+        Text('Você completou $_cursos',
+            textAlign: TextAlign.center,
+            style: Theme.of(context)
+                .textTheme
+                .titleMedium
+                ?.copyWith(fontWeight: FontWeight.w300)),
+        Padding(
+          padding: EdgeInsets.only(top: 50.0),
+          child: FloatingActionButton(
+            onPressed: () => setState(() => _cursos++),
+            child: Icon(Icons.add),
+          ),
         ),
       ],
     );
