@@ -24,7 +24,7 @@ class _SchoolPageState extends State<SchoolPage> {
               _launchUrl();
             },
             child: Text(
-              'Looks like a RaisedButton',
+              'Ir para School of net',
             ))
       ],
     );
